@@ -465,7 +465,7 @@ onTouchEnd: function(e) {
 
 function playSound(szSound,iVolume,bLoop){
     if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
-        
+
         if (szSound.match(/^right/) !== null) {
             szSound = "right" + Math.floor((Math.random() * 4) + 1);
         }
