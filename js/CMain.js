@@ -56,6 +56,9 @@ function CMain(oData){
         aSoundsInfo.push({path: './sounds/',filename:'game_over',loop:false,volume:1, ingamename: 'game_over'});
         aSoundsInfo.push({path: './sounds/',filename:'win',loop:false,volume:1, ingamename: 'win'});
         aSoundsInfo.push({path: './sounds/',filename:'right',loop:false,volume:1, ingamename: 'right'});
+        aSoundsInfo.push({path: './sounds/',filename:'right1',loop:false,volume:1, ingamename: 'right1'});
+        aSoundsInfo.push({path: './sounds/',filename:'right2',loop:false,volume:1, ingamename: 'right2'});
+        aSoundsInfo.push({path: './sounds/',filename:'right3',loop:false,volume:1, ingamename: 'right3'});
         aSoundsInfo.push({path: './sounds/',filename:'click',loop:false,volume:1, ingamename: 'click'});
         
         RESOURCE_TO_LOAD += aSoundsInfo.length;
