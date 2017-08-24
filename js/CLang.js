@@ -1,0 +1,19 @@
+TEXT_GAMEOVER  = "අවසන්";
+TEXT_PLAY      = "පටංගමු";
+TEXT_LEVEL_SCORE = "ඔවර් ලකුනු";
+TEXT_LEVELCOMPLETED = "ඔවරය අවසන්";
+TEXT_TIMELEFT = "කාලසීමාව ";
+TEXT_SCORE = "ලකුණු ";
+TEXT_MATCH_SCORE = "ලකුණු සම තත්වයක";
+TEXT_TIMEBONUS = "කාලලකුණු";
+TEXT_TOTALSCORE = "මුලු ලකුණු";
+TEXT_VICTORY = "ඔබ දනුම්";
+TEXT_PLAY_AGAIN = "නැවත";
+TEXT_DEVELOPED = "නිෂ්පාදණය";
+
+TEXT_SHARE_IMAGE = "200x200.jpg";
+TEXT_SHARE_TITLE = "මම දිනුම්!";
+TEXT_SHARE_MSG1 = "ඔබ ර්ස්කර ලකුණු <strong>";
+TEXT_SHARE_MSG2 = " </strong>!<br><br>මිත්රන් අතරේ බෙදාගන්න!";
+TEXT_SHARE_SHARE1 = "මගේ ලකුණු ";
+TEXT_SHARE_SHARE2 = " ඔයාට මාව පරද්දන්න පුලුවන්ද?";
