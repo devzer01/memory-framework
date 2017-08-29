@@ -467,7 +467,7 @@ function playSound(szSound,iVolume,bLoop){
     if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
 
         if (szSound.match(/^right/) !== null) {
-            szSound = "right" + Math.floor((Math.random() * 4) + 1);
+            szSound = "right" + Math.floor((Math.random() * 3) + 1);
         }
         s_aSounds[szSound].play();
         s_aSounds[szSound].volume(iVolume);

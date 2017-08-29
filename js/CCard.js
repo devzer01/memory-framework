@@ -9,6 +9,11 @@ function CCard(iX,iY,iType,fScalingFactor,oContainer){
 	var _oSprite;
     var _scope;
 	var _oContainer;
+	var _incorrect = 0;
+
+	this.incorrect = function() {
+		return ++_incorrect;	
+	};
         
     this._init = function(iX,iY,iType,fScalingFactor,oContainer){
         _iX = iX;
@@ -25,8 +30,8 @@ function CCard(iX,iY,iType,fScalingFactor,oContainer){
             _oSprite.x = CANVAS_WIDTH + _iX;
         };
 
-        _oSprite.y = _iY + Math.floor((Math.random()-0.5)*0);
-        _fScaleFactor = fScalingFactor;
+        _oSprite.y      = _iY + Math.floor((Math.random()-0.5)*0);
+        _fScaleFactor   = fScalingFactor;
         _oSprite.scaleX = _oSprite.scaleY = _fScaleFactor;
 
         _scope = this;
@@ -91,7 +96,6 @@ function CCard(iX,iY,iType,fScalingFactor,oContainer){
     this.flipCard = function(){
 
         if (_bFolded === true) {
-
             _bSuspendUpdates = true;
             createjs.Tween.get(_oSprite).to({scaleX:0.1}, 100).call(function(){
 

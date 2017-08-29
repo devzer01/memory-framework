@@ -16,6 +16,7 @@ function CInterface(szTimeLeft){
     var _fRequestFullScreen = null;
     var _fCancelFullScreen = null;
     
+    //modification to score card and other stuff needs to happen here
     this._init = function(szTimeLeft){
 	_pStartPosTimeText = {x:30,y:75};
         _szTimeLeft = TEXT_TIMELEFT + szTimeLeft;
@@ -27,7 +28,7 @@ function CInterface(szTimeLeft){
         s_oStage.addChild(_oTimeLeft);
 
 	_pStartPosScoreText = {x:CANVAS_WIDTH/2,y:75};
-        _szScore = TEXT_SCORE + 0;
+        _szScore = TEXT_SCORE + 0 + "/" + 0;
         _oScore = new createjs.Text(_szScore, "36px "+FONT_GAME, "#fff");
         _oScore.x = _pStartPosScoreText.x;
         _oScore.y = _pStartPosScoreText.y;
@@ -36,6 +37,7 @@ function CInterface(szTimeLeft){
         _oScore.shadow = new createjs.Shadow("#000000", 2, 2, 2);
         s_oStage.addChild(_oScore);
 
+		//this can be a decorator but who did decorator made you money>?
         _oScoreMultText = new createjs.Text("X2", "150px "+FONT_GAME, "#fff");
         _oScoreMultText.textAlign = "center";
         _oScoreMultText.textBaseline = "alphabetic";
@@ -108,7 +110,7 @@ function CInterface(szTimeLeft){
 
         s_oStage.removeChild(_oTimeLeft);
         s_oStage.removeChild(_oScore);
-	s_oInterface = null;
+	    s_oInterface = null;
     };
 
     this.refreshScore = function(iScore){

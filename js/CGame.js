@@ -7,6 +7,7 @@ function CGame(oData){
     var _iTimeLeft; // in ms
     var _iTimeElapsBetweenMatching;
     var _iScore = 0;
+    var _iWickets = 0;
     var _iCurMatchMult;
 
     var _iLevelScore = 0;
@@ -85,6 +86,8 @@ function CGame(oData){
         if (oCard.isFolded() === true && _bUpdatesSuspended === false) {
             if (_iFlippedCards < 2) {
                 oCard.flipCard();
+            } else {
+            	//playsound noball and wide
             } 
         };
     };
@@ -135,7 +138,7 @@ function CGame(oData){
             _iScore += (SCORE_MATCH_CARD * iMult);
             _iLevelScore += (SCORE_MATCH_CARD * iMult);
 
-            _oInterface.refreshScore(_iScore);
+            _oInterface.refreshScore(_iScore + "/" + _iWickets);
 
             if (_iCardsNum === 0 && 
                 _iCurrentLevel <= s_aCardsPerLevel.length){
@@ -147,11 +150,28 @@ function CGame(oData){
             };
 
         } else {
+        		var out1 = _aCards[foldedCardsId[0]].incorrect();
                 _aCards[foldedCardsId[0]].flipCard();
                 _aCards[foldedCardsId[0]].clickListener();
     
+    			var out2 = _aCards[foldedCardsId[1]].incorrect();
                 _aCards[foldedCardsId[1]].flipCard();
                 _aCards[foldedCardsId[1]].clickListener();
+
+				if (out1 >= 3 || out2 >= 3) {
+					_iWickets++;
+					_oInterface.refreshScore(_iScore + "/" + _iWickets);
+					playSound("win", 1, false);
+				}
+				if (_iWickets == 10) {
+					_bUpdatesSuspended = true;
+            		_iTimeLeft = 0;
+
+            		playSound("game_over", 1, false);
+            		_oGameOverUI.display(_iScore);
+
+            		_iCurrentLevel = 1;
+				}
         };
 
         _iFlippedCards = 0;
@@ -165,7 +185,7 @@ function CGame(oData){
         _iScore += _iLevelTimeBonus;
 		
         // Update Interface
-        _oInterface.refreshScore(_iScore);   
+        _oInterface.refreshScore(_iScore + "/" + _iWickets);
         
         $(s_oMain).trigger("end_level",_iCurrentLevel);
         if (_iCurrentLevel < s_aCardsPerLevel.length) {
@@ -192,7 +212,8 @@ function CGame(oData){
 	_iTimeElapsBetweenMatching = TIME_FOR_MATCH_MULT;
 
         var aChosenCards = [];
-
+		
+		//same set of cards for lower level? //CHANGE
         for (var i = 0; i < _iCardsNum/2; i++) {
             aChosenCards[i] = i;
             aChosenCards[i+_iCardsNum/2] = i; 
@@ -203,10 +224,10 @@ function CGame(oData){
             var sCardType = "card" + aChosenCards[iChosenCard];
 
             _aCards[i] = new CCard(_oLevelData.cardsPos[i][0],
-                                    _oLevelData.cardsPos[i][1],
-									sCardType,
-									_oLevelData.cardZoomFactor,
-									_oAttachCard);
+                                   _oLevelData.cardsPos[i][1],
+								    sCardType,
+								   _oLevelData.cardZoomFactor,
+								   _oAttachCard);
 
             aChosenCards.splice(iChosenCard,1); 
         };

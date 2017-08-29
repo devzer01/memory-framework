@@ -19,7 +19,7 @@ function CToggle(iXPos,iYPos,oSprite,bActive,oParentContainer){
         var oSpriteSheet = new createjs.SpriteSheet(oData);
          
         _bActive = bActive;
-	_oButton = createSprite(oSpriteSheet, "state_"+_bActive,(oSprite.width/2)/2,oSprite.height/2,oSprite.width/2,oSprite.height);
+	    _oButton = createSprite(oSpriteSheet, "state_"+_bActive,(oSprite.width/2)/2,oSprite.height/2,oSprite.width/2,oSprite.height);
          
         _oButton.x = iXPos;
         _oButton.y = iYPos; 
