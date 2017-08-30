@@ -80,6 +80,10 @@ function CMain(oData) {
         s_oSpriteLibrary.init(this._onImagesLoaded, this._onAllImagesLoaded, this);
 
         s_oSpriteLibrary.addSprite("but_menu_bg", "./sprites/but_menu_bg.png");
+
+        s_oSpriteLibrary.addSprite("player_name", "./sprites/player-name.png");
+        s_oSpriteLibrary.addSprite("score_bg", "./sprites/score-bg.png");
+
         s_oSpriteLibrary.addSprite("but_exit", "./sprites/but_exit.png");
         s_oSpriteLibrary.addSprite("bg_menu", "./sprites/bg_menu.jpg");
         s_oSpriteLibrary.addSprite("audio_icon", "./sprites/audio_icon.png");
@@ -87,6 +91,10 @@ function CMain(oData) {
         s_oSpriteLibrary.addSprite("bg_2", "./sprites/bg_2.jpg");
         s_oSpriteLibrary.addSprite("bg_3", "./sprites/bg_3.jpg");
         s_oSpriteLibrary.addSprite("bg_4", "./sprites/bg_4.jpg");
+        s_oSpriteLibrary.addSprite("bg_5", "./sprites/bg_5.jpg");
+        s_oSpriteLibrary.addSprite("bg_6", "./sprites/bg_6.jpg");
+        s_oSpriteLibrary.addSprite("bg_7", "./sprites/bg_7.jpg");
+        s_oSpriteLibrary.addSprite("bg_8", "./sprites/bg_8.jpg");
         s_oSpriteLibrary.addSprite("card_spritesheet", "./sprites/card_spritesheet.png");
         s_oSpriteLibrary.addSprite("msg_box", "./sprites/msg_box.png");
         s_oSpriteLibrary.addSprite("but_fullscreen", "./sprites/but_fullscreen.png");

@@ -1,4 +1,4 @@
-function CGfxButton(iXPos,iYPos,oSprite, oParentContainer){
+function CGfxButton(iXPos, iYPos, oSprite, oParentContainer) {
     
     var _bDisabled;
     
@@ -11,7 +11,7 @@ function CGfxButton(iXPos,iYPos,oSprite, oParentContainer){
     var _oTween;
     var _oParent;
     
-    this._init =function(iXPos,iYPos,oSprite, oParentContainer){
+    this._init =function(iXPos, iYPos, oSprite, oParentContainer){
         _bDisabled = false;
         
         _iScaleFactor = 1;
@@ -22,7 +22,7 @@ function CGfxButton(iXPos,iYPos,oSprite, oParentContainer){
         _oButton = createBitmap( oSprite);
         _oButton.x = iXPos;
         _oButton.y = iYPos; 
-        _oButton.scaleX =   _oButton.scaleY = _iScaleFactor;                         
+        _oButton.scaleX = _oButton.scaleY = _iScaleFactor;
         _oButton.regX = oSprite.width/2;
         _oButton.regY = oSprite.height/2;
         _oButton.cursor = "pointer";
@@ -141,7 +141,7 @@ function CGfxButton(iXPos,iYPos,oSprite, oParentContainer){
     };
 
     _oParent = this;
-    this._init(iXPos,iYPos,oSprite, oParentContainer);
+    this._init(iXPos, iYPos, oSprite, oParentContainer);
     
     return this;
 }
