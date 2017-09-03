@@ -24,7 +24,9 @@ function CGame(oData){
     this._init = function(){
 
         // load spritesheet
-        var oSpriteSheetPNG = s_oSpriteLibrary.getSprite('card_spritesheet');
+        console.log("in game");
+        console.log(selectedTeam);
+        var oSpriteSheetPNG = s_oSpriteLibrary.getSprite('card_' + selectedTeam);
         var oSpriteSheetData = {
                                     images: [oSpriteSheetPNG],
                                     frames: {width: CARD_WIDTH, height: CARD_HEIGHT, regX: CARD_WIDTH/2, regY: CARD_HEIGHT/2},

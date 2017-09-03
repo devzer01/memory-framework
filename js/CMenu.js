@@ -109,22 +109,36 @@ function CMenu(){
         var bitmap = new createjs.Bitmap("sprites/flag-lk.png");
         bitmap.x = (CANVAS_WIDTH / 2) - 100;
         bitmap.y = 200;
+        bitmap.on("click", this._onButPlayRelease, this, false, "lk");
         s_oStage.addChild(bitmap);
 
         var bitmap = new createjs.Bitmap("sprites/flag-pk.png");
         bitmap.x = (CANVAS_WIDTH / 2) - 100;
-        bitmap.y = 400;
+        bitmap.y = 350;
+        bitmap.on("click", this._onButPlayRelease, this, false, "pk");
         s_oStage.addChild(bitmap);
 
         var bitmap = new createjs.Bitmap("sprites/flag-bd.png");
         bitmap.x = (CANVAS_WIDTH / 2) - 100;
-        bitmap.y = 600;
+        bitmap.y = 500;
+        bitmap.on("click", this._onButPlayRelease, this, 'bd' );
         s_oStage.addChild(bitmap);
 
         var bitmap = new createjs.Bitmap("sprites/flag-in.png");
         bitmap.x = (CANVAS_WIDTH / 2) - 100;
-        bitmap.y = 800;
+        bitmap.y = 650;
+        bitmap.on("click", this._onButPlayRelease, this, 'in');
         s_oStage.addChild(bitmap);
+
+        var bitmap = new createjs.Bitmap("sprites/flag-all.png");
+        bitmap.x = (CANVAS_WIDTH / 2) - 100;
+        bitmap.y = 800;
+        bitmap.on("click", this._onButPlayRelease, this, false, 'all');
+        s_oStage.addChild(bitmap);
+
+        //_oButPlay = new CTextButton(_pStartPosPlay.x,_pStartPosPlay.y,oSprite, TEXT_PLAY, FONT_GAME,"White","24",s_oStage);
+        //_oButPlay.setScale(2);
+        //_oButPlay.addEventListener(ON_MOUSE_UP, this._onButPlayRelease, this);
 
         var text = new createjs.Text("කන්ඩායම තොරාගන්න", "60px "+FONT_GAME, "#ffffff");
         var bounds = text.getBounds();
@@ -163,12 +177,30 @@ function CMenu(){
         });
         s_oStage.addChild(bitmap);
 
+        var shapeNotice  = new createjs.Shape();
+        shapeNotice.set({alpha: 0.5});
+        shapeNotice.graphics.beginFill("#acbade").drawRect(150, 200, 500, 700);
+        s_oStage.addChild(shapeNotice);
+
+        var text = new createjs.Text("ක්‍රිකටි ක්‍රිඩාව සහ මතකය \nක්‍රිඩා දෙක ආශ්‍රිතව සැකසූ \nනිර්මාණයකි. \n\n\n\nපරිගණකයේ, ජංගම දුරකතන \nසහ ටැබි යන සියල්ලෙන්ම \nවිනදය ලැබිය හැක\n\n\n\nදකුණු පස කොඩිමගින් ඔබට \nකැමති කණ්ඩායම තොරාගන්න ", "35px "+FONT_GAME, "#ffffff");
+        var bounds = text.getBounds();
+        text.x = 170;
+        text.y = 250;
+        text.textBaseline = "alphabetic";
+        text.shadow = new createjs.Shadow("#000000", 5, 5, 10);
+        text.scale = 2;
+        s_oStage.addChild(text);
+/*
+        var noticeBoard = new createjs.Graphics.Rectangle(30, 30, 400, 500);
+        noticeBoard.fill("red");
+        s_oStage.addChild(noticeBoard);*/
+
     };
     
     this.unload = function(){
-        _oButPlay.unload(); 
-        _oButPlay = null;
-        _oButCredits.unload();
+       /* _oButPlay.unload();
+        _oButPlay = null;*/
+        //_oButCredits.unload();
         
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
             _oAudioToggle.unload();
@@ -181,7 +213,7 @@ function CMenu(){
     };
 	
     this.refreshButtonPos = function(iNewX,iNewY) {
-        _oButPlay.setPosition(_pStartPosPlay.x,_pStartPosPlay.y - iNewY);
+        //_oButPlay.setPosition(_pStartPosPlay.x,_pStartPosPlay.y - iNewY);
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
                 _oAudioToggle.setPosition(_pStartPosAudio.x - iNewX,iNewY + _pStartPosAudio.y);
         }
@@ -191,8 +223,9 @@ function CMenu(){
         _oButCredits.setPosition(_pStartPosCredits.x + iNewX,_pStartPosCredits.y + iNewY);
     };
     
-    this._onButPlayRelease = function(){
+    this._onButPlayRelease = function(me, team){
         this.unload();
+        selectedTeam = team;
         $(s_oMain).trigger("start_session");
         s_oMain.gotoGame();
 	    s_oMenu = null;
@@ -225,3 +258,4 @@ function CMenu(){
 }
 
 var s_oMenu = null;
+var selectedTeam = 1;
