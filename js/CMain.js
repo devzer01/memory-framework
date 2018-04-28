@@ -17,6 +17,8 @@ function CMain(oData) {
         s_bMobile = jQuery.browser.mobile;
         if (s_bMobile === false) {
             s_oStage.enableMouseOver(20);
+        } else if(navigator.userAgent.match(/android/i)) {
+            window.location.href = "https://play.google.com/store/apps/details?id=lk.pituwa.memory";
         }
 
         s_iPrevTime = new Date().getTime();
