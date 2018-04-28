@@ -21,11 +21,8 @@ gulp.task('compress', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./js/libs/jquery-2.0.3.min.js',
-      './js/libs/createjs-2013.12.12.min.js',
-      './js/libs/howler.min.js',
-      './js/libs/ctl_utils.js',
-      './js/libs/sprite_lib.js',
+  return gulp.src(['./js/ctl_utils.js',
+      './js/sprite_lib.js',
       './js/settings.js',
       './js/CLang.js',
       './js/CPreloader.js',
