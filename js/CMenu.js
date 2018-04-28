@@ -29,12 +29,12 @@ function CMenu(){
 	    //_oButPlay.setScale(2);
         //_oButPlay.addEventListener(ON_MOUSE_UP, this._onButPlayRelease, this);
         
-/*        var oSpriteCredits = s_oSpriteLibrary.getSprite('but_credits');
+        var oSpriteCredits = s_oSpriteLibrary.getSprite('but_credits');
         _pStartPosCredits = {
             x:oSpriteCredits.width  /2 + 10,
             y:oSpriteCredits.height /2 + 40};
         _oButCredits = new CGfxButton(_pStartPosCredits.x, _pStartPosCredits.y, oSpriteCredits, s_oStage);
-        _oButCredits.addEventListener(ON_MOUSE_UP, this._onButCreditsRelease, this);*/
+        _oButCredits.addEventListener(ON_MOUSE_UP, this._onButCreditsRelease, this);
 
         var text = new createjs.Text("ලෝකසූරයන්", "30px "+FONT_GAME, "#ffffff");
         var bounds = text.getBounds();
@@ -158,7 +158,7 @@ function CMenu(){
         text.scale = 2;
         s_oStage.addChild(text);*/
 
-        var text = new createjs.Text("පිටුව ප්‍රකාශකය ෝ සියලුම හිමිකම් සහිතයි 2017", "20px "+FONT_GAME, "#ffffff");
+        var text = new createjs.Text("පිටුව ප්‍රකාශකය ෝ සියලුම හිමිකම් සහිතයි 2018", "20px "+FONT_GAME, "#ffffff");
         var bounds = text.getBounds();
         text.x = (CANVAS_WIDTH / 2) - (bounds.width / 2);
         text.y = CANVAS_HEIGHT - 50;
@@ -190,10 +190,19 @@ function CMenu(){
         text.shadow = new createjs.Shadow("#000000", 5, 5, 10);
         text.scale = 2;
         s_oStage.addChild(text);
-/*
-        var noticeBoard = new createjs.Graphics.Rectangle(30, 30, 400, 500);
-        noticeBoard.fill("red");
-        s_oStage.addChild(noticeBoard);*/
+
+        //var noticeBoard = new createjs.Graphics.Rectangle(30, 30, 400, 500);
+        //noticeBoard.fill("red");
+        //s_oStage.addChild(noticeBoard);
+
+
+        var playStoreSprite = s_oSpriteLibrary.getSprite('playStore');
+        var oPlayStore = {x: CANVAS_WIDTH - playStoreSprite.width , y: CANVAS_HEIGHT - playStoreSprite.height }; //{ x:CANVAS_WIDTH - (playStoreSprite.width/2)*2 - 70, y:(playStoreSprite.height/2) + 20 };
+        var playStoreButton = new CGfxButton(oPlayStore.x, oPlayStore.y, playStoreSprite, s_oStage);
+        playStoreButton.addEventListener(ON_MOUSE_DOWN, function() {
+            document.location.href = PLAY_STORE_URL;
+        }, this);
+        //s_oStage.addChild(playStoreButton);
 
     };
     
@@ -220,7 +229,7 @@ function CMenu(){
         if (_fRequestFullScreen && inIframe() === false){
             _oButFullscreen.setPosition(_pStartPosFullscreen.x - iNewX,_pStartPosFullscreen.y + iNewY);
         }
-        _oButCredits.setPosition(_pStartPosCredits.x + iNewX,_pStartPosCredits.y + iNewY);
+        _oButCredits.setPosition(_pStartPosCredits.x + iNewX, _pStartPosCredits.y + iNewY);
     };
     
     this._onButPlayRelease = function(me, team){

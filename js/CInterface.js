@@ -58,21 +58,27 @@ function CInterface(szTimeLeft){
         _oScoreMultText.visible = false;
         s_oStage.addChild(_oScoreMultText);
 
-        var oSprite = s_oSpriteLibrary.getSprite('but_exit');
-        _pStartPosExit = {x:CANVAS_WIDTH - (oSprite.width/2) - 20,y:(oSprite.height/2) + 20};
+        var exitSprite = s_oSpriteLibrary.getSprite('but_exit');
+        _pStartPosExit = {x:CANVAS_WIDTH - (exitSprite.width/2) - 20,y:(exitSprite.height/2) + 20};
         var oSprite2 = s_oSpriteLibrary.getSprite('audio_icon');
         _pStartPosAudio = {x:CANVAS_WIDTH - (oSprite2.width/2)*2 - 10,y:(oSprite2.height/2) + 20};
-		
-        
-        _oButExit = new CGfxButton(_pStartPosExit.x,_pStartPosExit.y,oSprite,s_oStage);
+
+        var playStoreSprite = s_oSpriteLibrary.getSprite('playStore');
+        var oPlayStore = {x: CANVAS_WIDTH - playStoreSprite.width , y: CANVAS_HEIGHT - playStoreSprite.height }; //{ x:CANVAS_WIDTH - (playStoreSprite.width/2)*2 - 70, y:(playStoreSprite.height/2) + 20 };
+        var playStoreButton = new CGfxButton(oPlayStore.x, oPlayStore.y, playStoreSprite, s_oStage);
+        playStoreButton.addEventListener(ON_MOUSE_DOWN, function() {
+            document.location.href = PLAY_STORE_URL;
+        }, this);
+
+        _oButExit = new CGfxButton(_pStartPosExit.x, _pStartPosExit.y, exitSprite, s_oStage);
         _oButExit.addEventListener(ON_MOUSE_UP, this._onExit, this);
 
         if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){   
-            _oAudioToggle = new CToggle(_pStartPosAudio.x,_pStartPosAudio.y,oSprite2,s_bAudioActive,s_oStage);
+            _oAudioToggle = new CToggle(_pStartPosAudio.x,_pStartPosAudio.y,oSprite2, s_bAudioActive, s_oStage);
             _oAudioToggle.addEventListener(ON_MOUSE_UP, this._onAudioToggle, this);
-            _pStartPosFullscreen = {x:_pStartPosAudio.x-oSprite.width - 20,y:_pStartPosAudio.y};
+            _pStartPosFullscreen = {x:_pStartPosAudio.x-exitSprite.width - 20,y:_pStartPosAudio.y};
         }else{
-                _pStartPosFullscreen = {x:_pStartPosExit.x-oSprite.width - 20,y:_pStartPosExit.y};
+            _pStartPosFullscreen = {x:_pStartPosExit.x-exitSprite.width - 20,y:_pStartPosExit.y};
         }
 		
 	var doc = window.document;
@@ -85,7 +91,7 @@ function CInterface(szTimeLeft){
         }
 
         if (_fRequestFullScreen && inIframe() === false){
-            oSprite = s_oSpriteLibrary.getSprite('but_fullscreen');
+            var oSprite = s_oSpriteLibrary.getSprite('but_fullscreen');
             
             _oButFullscreen = new CToggle(_pStartPosFullscreen.x,_pStartPosFullscreen.y,oSprite,s_bFullscreen,s_oStage);
             _oButFullscreen.addEventListener(ON_MOUSE_UP, this._onFullscreenRelease, this);
@@ -141,6 +147,11 @@ function CInterface(szTimeLeft){
                                                                                                                                                 _oScoreMultText.visible = false;
                                                                                                                                             }); 
                                                                                             });  
+    };
+
+    this._openPlayStore = function () {
+        document.location.href = "https://play.google.com/store/apps/details?id=lk.pituwa.cricket";
+
     };
 
     this.updateBalls = function(balls) {

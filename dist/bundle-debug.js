@@ -493,6 +493,10 @@ onTouchEnd: function(e) {
 function playSound(szSound,iVolume,bLoop){
     if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
 
+        console.log(szSound);
+        if (szSound.match(/^right/)) {
+            szSound = "right" + Math.floor((Math.random() * 3) + 1);
+        }
         s_aSounds[szSound].play();
         s_aSounds[szSound].volume(iVolume);
 
@@ -644,7 +648,7 @@ var ENABLE_CHECK_ORIENTATION;
 TEXT_GAMEOVER  = "අවසන්";
 TEXT_PLAY      = "පටංගමු";
 TEXT_LEVEL_SCORE = "ඔවර් ලකුනු";
-TEXT_LEVELCOMPLETED = "ඔවරය අවසන්";
+TEXT_LEVELCOMPLETED = "මද විරාමය";
 TEXT_TIMELEFT = "කාලසීමාව ";
 TEXT_SCORE = "ලකුණු ";
 TEXT_MATCH_SCORE = "ලකුණු සම තත්වයක";
@@ -829,6 +833,7 @@ function CMain(oData){
         s_oSpriteLibrary.addSprite("but_exit","./sprites/but_exit.png");
         s_oSpriteLibrary.addSprite("bg_menu","./sprites/bg_menu.jpg");
         s_oSpriteLibrary.addSprite("audio_icon","./sprites/audio_icon.png");
+        s_oSpriteLibrary.addSprite("playstore","play.svg");
         s_oSpriteLibrary.addSprite("bg_1","./sprites/bg_1.jpg");
         s_oSpriteLibrary.addSprite("bg_2","./sprites/bg_2.jpg");
         s_oSpriteLibrary.addSprite("bg_3","./sprites/bg_3.jpg");

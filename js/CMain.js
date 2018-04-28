@@ -87,6 +87,7 @@ function CMain(oData) {
         s_oSpriteLibrary.addSprite("but_exit", "./sprites/but_exit.png");
         s_oSpriteLibrary.addSprite("bg_menu", "./sprites/bg_menu.jpg");
         s_oSpriteLibrary.addSprite("audio_icon", "./sprites/audio_icon.png");
+        s_oSpriteLibrary.addSprite("playStore","./sprites/play.png");
         s_oSpriteLibrary.addSprite("bg_1", "./sprites/bg_1.jpg");
         s_oSpriteLibrary.addSprite("bg_2", "./sprites/bg_2.jpg");
         s_oSpriteLibrary.addSprite("bg_3", "./sprites/bg_3.jpg");
