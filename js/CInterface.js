@@ -6,6 +6,7 @@ function CInterface(szTimeLeft){
 	var _pStartPosFullscreen;
 	
     var _oTimeLeft;
+    var _oBallsFormat;
     var _oTimeLeft; 
     var _oScore;
     var _oAudioToggle;
@@ -17,7 +18,8 @@ function CInterface(szTimeLeft){
     var _fCancelFullScreen = null;
     
     //modification to score card and other stuff needs to happen here
-    this._init = function(szTimeLeft){
+    this._init = function(szTimeLeft) {
+
 	_pStartPosTimeText = {x:30,y:75};
         _szTimeLeft = TEXT_TIMELEFT + szTimeLeft;
         _oTimeLeft = new createjs.Text(_szTimeLeft, "36px "+FONT_GAME, "#fff");
@@ -26,6 +28,14 @@ function CInterface(szTimeLeft){
         _oTimeLeft.textBaseline = "alphabetic";
         _oTimeLeft.shadow = new createjs.Shadow("#000000", 2, 2, 2);
         s_oStage.addChild(_oTimeLeft);
+
+    _oBallsFormat = new createjs.Text(TEXT_OVERS + " 0.0", "39px "+FONT_GAME, "#fff");
+        _oBallsFormat.x = 30;
+        _oBallsFormat.y = 180;
+        _oBallsFormat.textAlign = "left";
+        _oBallsFormat.textBaseline = "alphabetic";
+        _oBallsFormat.shadow = new createjs.Shadow("#000000", 2, 2, 2);
+        s_oStage.addChild(_oBallsFormat);
 
 	_pStartPosScoreText = {x:CANVAS_WIDTH/2,y:75};
         _szScore = TEXT_SCORE + 0 + "/" + 0;
@@ -113,6 +123,11 @@ function CInterface(szTimeLeft){
 	    s_oInterface = null;
     };
 
+    this.refreshBalls = function(balls) {
+        console.log("balls received " + balls);
+        _oBallsFormat.text = TEXT_OVERS + " " + balls;
+    };
+
     this.refreshScore = function(iScore){
         _oScore.text = TEXT_SCORE + iScore;
     };
@@ -126,6 +141,10 @@ function CInterface(szTimeLeft){
                                                                                                                                                 _oScoreMultText.visible = false;
                                                                                                                                             }); 
                                                                                             });  
+    };
+
+    this.updateBalls = function(balls) {
+
     };
 
     this.update = function(szTimeLeft){

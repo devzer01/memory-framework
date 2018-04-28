@@ -22,19 +22,19 @@ function CNextLevel(){
 		_oMsgText.textAlign = "center";
 		_oMsgText.shadow = new createjs.Shadow("#000000", 3, 3, 2);
 
-		_oMatchTextScore = new createjs.Text(TEXT_MATCH_SCORE,"30px "+FONT_GAME, "#fff");
+		/*_oMatchTextScore = new createjs.Text(TEXT_MATCH_SCORE,"30px "+FONT_GAME, "#fff");
 		_oMatchTextScore.x = CANVAS_WIDTH/2 ;
 		_oMatchTextScore.y = (CANVAS_HEIGHT/2) -20;
 		_oMatchTextScore.textAlign = "center";
 		_oMatchTextScore.textBaseline = "alphabetic";
-		_oMatchTextScore.shadow = new createjs.Shadow("#000000", 2, 2, 2);
+		_oMatchTextScore.shadow = new createjs.Shadow("#000000", 2, 2, 2);*/
 
-		_oMsgTimeScore = new createjs.Text(TEXT_TIMEBONUS,"30px "+FONT_GAME, "#fff");
+		/*_oMsgTimeScore = new createjs.Text(TEXT_TIMEBONUS,"30px "+FONT_GAME, "#fff");
 		_oMsgTimeScore.x = CANVAS_WIDTH/2 ;
 		_oMsgTimeScore.y = (CANVAS_HEIGHT/2 + 14);
 		_oMsgTimeScore.textAlign = "center";
 		_oMsgTimeScore.textBaseline = "alphabetic";
-		_oMsgTimeScore.shadow = new createjs.Shadow("#000000", 2, 2, 2);
+		_oMsgTimeScore.shadow = new createjs.Shadow("#000000", 2, 2, 2);*/
 		
 		_oMsgLevelScore = new createjs.Text(TEXT_LEVEL_SCORE,"34px "+FONT_GAME, "#fff");
 		_oMsgLevelScore.x = CANVAS_WIDTH/2 ;
@@ -64,8 +64,8 @@ function CNextLevel(){
 
 
     this.display = function(iMatchScore,iTimeBonus,iLevelScore,iTotalScore,iLevel){
-        _oMatchTextScore.text = TEXT_MATCH_SCORE+ " = " + iMatchScore;
-        _oMsgTimeScore.text = TEXT_TIMEBONUS + " = "+iTimeBonus;
+        /*//_oMatchTextScore.text = TEXT_MATCH_SCORE+ " = " + iMatchScore;
+        /_oMsgTimeScore.text = TEXT_TIMEBONUS + " = "+iTimeBonus;*/
 		_oMsgLevelScore.text = TEXT_LEVEL_SCORE + " = "+iLevelScore;
         _oMsgTotalScore.text = TEXT_TOTALSCORE + " " + iTotalScore;
 

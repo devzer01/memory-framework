@@ -648,7 +648,7 @@ var ENABLE_CHECK_ORIENTATION;
 TEXT_GAMEOVER  = "අවසන්";
 TEXT_PLAY      = "පටංගමු";
 TEXT_LEVEL_SCORE = "ඔවර් ලකුනු";
-TEXT_LEVELCOMPLETED = "ඔවරය අවසන්";
+TEXT_LEVELCOMPLETED = "මද විරාමය";
 TEXT_TIMELEFT = "කාලසීමාව ";
 TEXT_SCORE = "ලකුණු ";
 TEXT_MATCH_SCORE = "ලකුණු සම තත්වයක";

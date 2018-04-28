@@ -97,8 +97,14 @@ function CGame(oData){
     this.addFlippedCard = function(){
         _iFlippedCards++;
         if (_iFlippedCards === 2 && _bUpdatesSuspended === false) {
+            balls++;
+            _oInterface.refreshBalls(this.oversFormat());
             this.checkMatching();
         };
+    };
+
+    this.oversFormat = function() {
+       return parseInt(balls / 6) + "." + parseInt(balls % 6);
     };
 
     this.checkMatching = function(){
@@ -114,7 +120,7 @@ function CGame(oData){
 
         if (foldedCardsType[0] === foldedCardsType[1]) {
             var iMult = 1;
-            if(_iTimeElapsBetweenMatching < TIME_FOR_MATCH_MULT){
+            if(_iTimeElapsBetweenMatching < TIME_FOR_MATCH_MULT) {
                     //PLAYER GET BONUS MULTIPLIER
                     _iTimeElapsBetweenMatching = 0;
                     _oInterface.showMultiplier(_iCurMatchMult);
@@ -122,7 +128,7 @@ function CGame(oData){
                     iMult = _iCurMatchMult;
 
                     _iCurMatchMult++;
-            }else{
+            } else{
                     _iCurMatchMult = 2;
                     _iTimeElapsBetweenMatching = 0;
             }
@@ -142,39 +148,37 @@ function CGame(oData){
 
             _oInterface.refreshScore(_iScore + "/" + _iWickets);
 
-            if (_iCardsNum === 0 && 
-                _iCurrentLevel <= s_aCardsPerLevel.length){
-                
+
+            if (_iCardsNum === 0 &&  _iCurrentLevel <= s_aCardsPerLevel.length) {
                 _bUpdatesSuspended = true;
-				
 				var oParent =  this;
                 setTimeout(function(){oParent.checkVictory();}, 1000);
             };
 
         } else {
-        		var out1 = _aCards[foldedCardsId[0]].incorrect();
-                _aCards[foldedCardsId[0]].flipCard();
-                _aCards[foldedCardsId[0]].clickListener();
-    
-    			var out2 = _aCards[foldedCardsId[1]].incorrect();
-                _aCards[foldedCardsId[1]].flipCard();
-                _aCards[foldedCardsId[1]].clickListener();
+            var out1 = _aCards[foldedCardsId[0]].incorrect();
+            _aCards[foldedCardsId[0]].flipCard();
+            _aCards[foldedCardsId[0]].clickListener();
 
-				if (out1 >= 3 || out2 >= 3) {
-					_iWickets++;
-					_oInterface.refreshScore(_iScore + "/" + _iWickets);
-					playSound("win", 1, false);
-				}
-				if (_iWickets == 10) {
-					_bUpdatesSuspended = true;
-            		_iTimeLeft = 0;
+            var out2 = _aCards[foldedCardsId[1]].incorrect();
+            _aCards[foldedCardsId[1]].flipCard();
+            _aCards[foldedCardsId[1]].clickListener();
 
-            		playSound("game_over", 1, false);
-            		_oGameOverUI.display(_iScore);
+            if (out1 >= 3 || out2 >= 3) {
+                _iWickets++;
+                _oInterface.refreshScore(_iScore + "/" + _iWickets);
+                playSound("win", 1, false);
+            }
+            if (_iWickets == 10) {
+                _bUpdatesSuspended = true;
+                _iTimeLeft = 0;
 
-            		_iCurrentLevel = 1;
-				}
-        };
+                playSound("game_over", 1, false);
+                _oGameOverUI.display(_iScore);
+
+                _iCurrentLevel = 1;
+            }
+    };
 
         _iFlippedCards = 0;
     };
@@ -192,7 +196,10 @@ function CGame(oData){
         $(s_oMain).trigger("end_level",_iCurrentLevel);
         if (_iCurrentLevel < s_aCardsPerLevel.length) {
                 playSound("next_level", 1, false);
-                _oNextLevelUI.display(_iLevelScore,_iLevelTimeBonus,_iLevelScore+_iLevelTimeBonus,_iScore,_iCurrentLevel); 
+                _oNextLevelUI.display(_iLevelScore,
+                    _iLevelTimeBonus, this.oversFormat(),
+                    _iScore + "/" + _iWickets,
+                    _iCurrentLevel);
         }else{
                 playSound("win", 1, false);
                 _oVictoryUI.display(_iScore);
@@ -293,3 +300,4 @@ function CGame(oData){
 var s_aCardsPerLevel;
 var s_aSecsPerLevel;
 var s_oGame;
+var balls = 0;

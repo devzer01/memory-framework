@@ -1,7 +1,7 @@
 TEXT_GAMEOVER  = "අවසන්";
 TEXT_PLAY      = "පටංගමු";
-TEXT_LEVEL_SCORE = "ඔවර් ලකුනු";
-TEXT_LEVELCOMPLETED = "ඔවරය අවසන්";
+TEXT_LEVEL_SCORE = "ඔවර";
+TEXT_LEVELCOMPLETED = "මද විරාම";
 TEXT_TIMELEFT = "කාලසීමාව ";
 TEXT_SCORE = "ලකුණු ";
 TEXT_MATCH_SCORE = "ලකුණු සම තත්වයක";
@@ -10,6 +10,7 @@ TEXT_TOTALSCORE = "මුලු ලකුණු";
 TEXT_VICTORY = "ඔබ දනුම්";
 TEXT_PLAY_AGAIN = "නැවත";
 TEXT_DEVELOPED = "නිෂ්පාදණය";
+TEXT_OVERS = "ඔවර්";
 
 TEXT_SHARE_IMAGE = "200x200.jpg";
 TEXT_SHARE_TITLE = "මම දිනුම්!";
