@@ -20,12 +20,16 @@ function CGame(oData){
     var _oGameOverUI;
     var _oVictoryUI;
     var _oAttachCard;
-    
+    var peek;
+
     this._init = function(){
+
+        peek = oData.show_cards !== 0;
 
         // load spritesheet
         console.log("in game");
         console.log(selectedTeam);
+
         var oSpriteSheetPNG = s_oSpriteLibrary.getSprite('card_' + selectedTeam);
         var oSpriteSheetData = {
                                     images: [oSpriteSheetPNG],
@@ -236,7 +240,7 @@ function CGame(oData){
                                    _oLevelData.cardsPos[i][1],
 								    sCardType,
 								   _oLevelData.cardZoomFactor,
-								   _oAttachCard);
+								   _oAttachCard, peek);
 
             aChosenCards.splice(iChosenCard,1); 
         };

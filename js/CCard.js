@@ -1,4 +1,4 @@
-function CCard(iX,iY,iType,fScalingFactor,oContainer){
+function CCard(iX,iY,iType,fScalingFactor,oContainer, peek){
 
     var _bSuspendUpdates = false;
 	var _bFolded;
@@ -49,7 +49,7 @@ function CCard(iX,iY,iType,fScalingFactor,oContainer){
         createjs.Tween.get(_oSprite).to({alpha:1, x:_iX, y:_iY}, 500).call(function handleComplete(){
             _bSuspendUpdates = false;
             s_oGame.restartUpdates();
-			if(TIME_SHOW_CARDS > 0){
+			if(peek){
 				oParent.showCardFirstTime();
 			}
         });

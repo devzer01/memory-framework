@@ -80,12 +80,9 @@ function CMain(oData) {
 
     this._loadImages = function () {
         s_oSpriteLibrary.init(this._onImagesLoaded, this._onAllImagesLoaded, this);
-
         s_oSpriteLibrary.addSprite("but_menu_bg", "./sprites/but_menu_bg.png");
-
         s_oSpriteLibrary.addSprite("player_name", "./sprites/player-name.png");
         s_oSpriteLibrary.addSprite("score_bg", "./sprites/score-bg.png");
-
         s_oSpriteLibrary.addSprite("but_exit", "./sprites/but_exit.png");
         s_oSpriteLibrary.addSprite("bg_menu", "./sprites/bg_menu.jpg");
         s_oSpriteLibrary.addSprite("audio_icon", "./sprites/audio_icon.png");
@@ -106,6 +103,8 @@ function CMain(oData) {
         s_oSpriteLibrary.addSprite("but_fullscreen", "./sprites/but_fullscreen.png");
         s_oSpriteLibrary.addSprite("but_credits", "./sprites/but_credits.png");
         s_oSpriteLibrary.addSprite("logo_ctl", "./sprites/logo_ctl.png");
+        s_oSpriteLibrary.addSprite("checkboxen", "./sprites/checkboxen.jpg");
+
 
         RESOURCE_TO_LOAD += s_oSpriteLibrary.getNumSprites();
 
@@ -210,9 +209,32 @@ function CMain(oData) {
 
     s_oMain = this;
     _oData = oData;
+
     ENABLE_CHECK_ORIENTATION = oData.check_orientation;
 
     this.initContainer();
+
+    $(this).on("save_score", function (e, score) {
+        updateScore(score);
+    });
+
+    $(this).on("toggle_peek", function (e) {
+       oData.show_cards = (oData.show_cards === 0) ? 1 : 0;
+       _oData.show_cards = oData.show_cards;
+    });
+
+    $(this).on("change_difficulty", function (e, lvl) {
+        oData.card_per_level = oData.card_per_level.map(function (v) {
+           return parseInt(v) * (parseInt(lvl) + 1);
+        });
+        oData.time_level = oData.time_level.map(function (v) {
+            return parseInt(v) * Math.ceil((parseInt(lvl) + 1) * 0.5);
+        });
+        _oData.card_per_level = oData.card_per_level;
+        _oData.time_level = oData.time_level;
+        oData.show_cards = (oData.show_cards === 0) ? 1 : 0;
+        _oData.show_cards = oData.show_cards;
+    });
 }
 
 var s_bMobile;
@@ -230,3 +252,4 @@ var s_oSpriteLibrary;
 var s_oGameSettings;
 var s_bFullscreen = false;
 var s_aSounds;
+

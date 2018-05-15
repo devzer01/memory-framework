@@ -23,7 +23,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0754c338-076f-40f4-a269-763fef752bf5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/createuser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/savescore.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scores.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/createjs-2013.12.12.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/createjs-2013.12.12.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/howler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/howler.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/jquery-2.0.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/jquery-2.0.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CGameOver.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CGameOver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CInterface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CLang.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CLang.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/CMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CNextLevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CNextLevel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CPreloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CPreloader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ctl_utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ctl_utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/flag-all.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/flag-all.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/flag-bd.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/flag-bd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/flag-in.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/flag-in.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,57 +61,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+    <leaf>
+      <file leaf-file-name="CNextLevel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/CNextLevel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="61" column="143" selection-start-line="61" selection-start-column="137" selection-end-line="61" selection-end-column="143" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CTextButton.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/CTextButton.js">
+      <file leaf-file-name="CGameOver.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/CGameOver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+            <state relative-caret-position="690">
+              <caret line="46" column="60" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMain.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/CMain.js">
+      <file leaf-file-name="CCard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/CCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="243">
+              <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <file leaf-file-name="CGame.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/CGame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            <state relative-caret-position="190">
+              <caret line="155" column="55" selection-start-line="155" selection-start-column="55" selection-end-line="155" selection-end-column="55" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createjs-2013.12.12.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/createjs-2013.12.12.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="index.bundle.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.bundle.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+            <state relative-caret-position="15">
+              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -95,30 +111,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="ctl_utils.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ctl_utils.js">
+      <file leaf-file-name="CLevels.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/CLevels.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1560">
-              <caret line="76" column="37" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="37" />
+            <state relative-caret-position="150">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createjs-2013.12.12.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/createjs-2013.12.12.min.js">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="CMain.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/CMain.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="229" column="62" lean-forward="true" selection-start-line="229" selection-start-column="62" selection-end-line="229" selection-end-column="62" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/settings.js">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="317">
+              <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="savescore.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/savescore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMenu.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/CMenu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -134,44 +167,44 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>GameOve</find>
-      <find>GameOver</find>
-      <find>_oGameOverUI</find>
-      <find>ර</find>
-      <find>රසටයඑ</find>
-      <find>එ</find>
-      <find>right4</find>
-      <find>r</find>
-      <find>ru</find>
-      <find>right</find>
-      <find>_oScoreMultText</find>
-      <find>right3</find>
-      <find>bac</find>
-      <find>back</find>
-      <find>backg</find>
-      <find>color</find>
-      <find>_onButCreditsRelease</find>
-      <find>ButPlay</find>
-      <find>ButPlayRelease</find>
-      <find>rotate</find>
-      <find>card_spritesheet</find>
-      <find>_onButPlayRelease</find>
-      <find>audio_icon</find>
-      <find>playstore</find>
-      <find>./</find>
       <find>refreshButtonPos</find>
       <find>wid</find>
       <find>browser.</find>
       <find>ctl</find>
       <find>mobile</find>
+      <find>o_Stage</find>
+      <find>s_oStage</find>
+      <find>select t</find>
+      <find>onLogin</find>
+      <find>Player</find>
+      <find>logo.png</find>
+      <find>trigger</find>
+      <find>end_level</find>
+      <find>$(s_oMain).on</find>
+      <find>s_oMain</find>
+      <find>refreshBalls</find>
+      <find>time</find>
+      <find>refreshLoader</find>
+      <find>_oLoadingText</find>
+      <find>header</find>
+      <find>score</find>
+      <find>card_</find>
+      <find>_oButCredits</find>
+      <find>TIME_SHOW</find>
+      <find>CGame</find>
+      <find>_oGame</find>
+      <find>ccARD</find>
+      <find>cards_per</find>
+      <find>oData</find>
+      <find>Top</find>
     </findStrings>
     <replaceStrings>
       <replace>(&quot;./</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
-      <dir>$PROJECT_DIR$/js</dir>
       <dir>$PROJECT_DIR$/dist</dir>
+      <dir>$PROJECT_DIR$/js</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -191,19 +224,29 @@
         <option value="$PROJECT_DIR$/js/libs/ctl_utils.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/js/CGfxButton.js" />
-        <option value="$PROJECT_DIR$/js/CPreloader.js" />
         <option value="$PROJECT_DIR$/js/CTextButton.js" />
         <option value="$PROJECT_DIR$/dist/bundle.js" />
-        <option value="$PROJECT_DIR$/js/CLang.js" />
-        <option value="$PROJECT_DIR$/js/CNextLevel.js" />
-        <option value="$PROJECT_DIR$/js/CGame.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/CMenu.js" />
-        <option value="$PROJECT_DIR$/js/CInterface.js" />
         <option value="$PROJECT_DIR$/js/settings.js" />
         <option value="$PROJECT_DIR$/index.bundle.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/dist/bundle-debug.js" />
+        <option value="$PROJECT_DIR$/js/CLeaderboard.js" />
+        <option value="$PROJECT_DIR$/js/CInterface.js" />
+        <option value="$PROJECT_DIR$/js/CLang.js" />
+        <option value="$PROJECT_DIR$/js/ctl_utils.js" />
+        <option value="$PROJECT_DIR$/js/CNextLevel.js" />
+        <option value="$PROJECT_DIR$/js/CGameOver.js" />
+        <option value="$PROJECT_DIR$/js/CPreloader.js" />
+        <option value="$PROJECT_DIR$/createuser.php" />
+        <option value="$PROJECT_DIR$/scores.php" />
+        <option value="$PROJECT_DIR$/vendor/php-on-couch/php-on-couch/src/CouchClient.php" />
+        <option value="$PROJECT_DIR$/js/CCard.js" />
+        <option value="$PROJECT_DIR$/js/CGame.js" />
+        <option value="$PROJECT_DIR$/savescore.php" />
         <option value="$PROJECT_DIR$/js/CMain.js" />
+        <option value="$PROJECT_DIR$/js/CMenu.js" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -229,10 +272,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="x" value="262" />
+    <option name="y" value="275" />
+    <option name="width" value="1853" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -250,44 +293,12 @@
             <path>
               <item name="memory-cricket" type="b2602c69:ProjectViewProjectNode" />
               <item name="memory-cricket" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory-cricket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory-cricket" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory-cricket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory-cricket" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory-cricket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory-cricket" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-              <item name="createjs-2013.12.12.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="memory-cricket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory-cricket" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-              <item name="howler.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="memory-cricket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory-cricket" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-              <item name="jquery-2.0.3.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="memory-cricket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory-cricket" type="462c0819:PsiDirectoryNode" />
               <item name="sets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="memory-cricket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="memory-cricket" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -307,14 +318,14 @@
     <property name="nodejs_interpreter_path" value="node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/dist" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sprites" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/js/libs" />
+      <recent name="$PROJECT_DIR$/dist" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/dist" />
     </key>
   </component>
@@ -425,11 +436,14 @@
       <workItem from="1506769166792" duration="229000" />
       <workItem from="1524883174490" duration="10655000" />
       <workItem from="1524923338243" duration="2656000" />
+      <workItem from="1525079114667" duration="7572000" />
+      <workItem from="1525367576699" duration="2252000" />
+      <workItem from="1526363189974" duration="39279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58002000" />
+    <option name="totallyTimeSpent" value="107105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -437,64 +451,66 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32925585" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18382749" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32925585" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32991803" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17681941" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Find" order="9" weight="0.32884097" />
+      <window_info active="true" anchor="right" id="Find" order="9" visible="true" weight="0.32830188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info id="Image Layers" order="2" />
+      <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="2" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="SBT Execute" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="TeamCity" order="9" />
+      <window_info anchor="bottom" id="SBT Execute" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="TeamCity" order="11" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="bottom" id="SBT Execute" order="1" side_tool="true" />
-      <window_info id="Designer" order="1" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32925585" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info id="Structure" order="5" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="4" />
       <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="0" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32984293" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="bottom" id="TeamCity" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="1" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.18423855" />
+      <window_info anchor="bottom" id="Run" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32925585" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="bottom" id="SBT Execute" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="TeamCity" order="11" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17708333" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="right" id="Find" order="9" visible="true" weight="0.32864583" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,41 +530,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/CTextButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CMain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CPreloader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CInterface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="91" lean-forward="true" selection-start-line="76" selection-start-column="91" selection-end-line="76" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/CMenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3045">
@@ -563,14 +544,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
           <caret line="121" column="43" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,99 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/CGfxButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="135" column="36" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CLevels.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CCredits.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/libs/createjs-2013.12.12.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="12" column="3519" selection-start-line="12" selection-start-column="3519" selection-end-line="12" selection-end-column="3519" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CLang.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CNextLevel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CGame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="206" column="6" selection-start-line="206" selection-start-column="6" selection-end-line="206" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sprite_lib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CVictory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CPreloader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="203" column="17" selection-start-line="198" selection-start-column="8" selection-end-line="203" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CInterface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="91" selection-start-line="76" selection-start-column="91" selection-end-line="76" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/CTextButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -734,19 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/createjs-2013.12.12.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/createjs-2013.12.12.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -754,42 +629,228 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.bundle.html">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="316">
+          <caret line="659" column="9" selection-start-line="659" selection-start-column="9" selection-end-line="659" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/css/reset.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/dist/bundle-debug.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="143" selection-start-line="61" selection-start-column="137" selection-end-line="61" selection-end-column="143" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="726" column="29" lean-forward="true" selection-start-line="726" selection-start-column="29" selection-end-line="726" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CLeaderboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CTextButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CCredits.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CLang.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ctl_utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1560">
-          <caret line="76" column="37" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="37" />
+        <state relative-caret-position="60">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CGfxButton.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/libs/jquery-2.0.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="7437" column="22" selection-start-line="7437" selection-start-column="22" selection-end-line="7437" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-on-couch/php-on-couch/src/CouchDocument.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-on-couch/php-on-couch/src/Adapter/CouchHttpAdapterCurl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-on-couch/php-on-couch/src/Couch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2556">
+          <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-on-couch/php-on-couch/src/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-on-couch/php-on-couch/src/CouchClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="973" column="41" lean-forward="true" selection-start-line="973" selection-start-column="41" selection-end-line="973" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="e#149#176#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CInterface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1880">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sprite_lib.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CVictory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CToggle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CPreloader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-807">
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/savescore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CGameOver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="60" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CNextLevel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.bundle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CGame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="155" column="55" selection-start-line="155" selection-start-column="55" selection-end-line="155" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CLevels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/CMain.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="210">
+          <caret line="229" column="62" lean-forward="true" selection-start-line="229" selection-start-column="62" selection-end-line="229" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
         </state>
       </provider>
     </entry>
