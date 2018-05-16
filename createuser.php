@@ -3,7 +3,7 @@
 include_once 'vendor/autoload.php';
 
 ### ANON DSN
-$couchDsn = "http://localhost:5984/";
+$couchDsn = "http://admin:foobar@localhost:5984/";
 ### AUTHENTICATED DSN
 //$couchDsn = "http://admin:adminPwd@localhost:5984/";
 $couchDB = "userprofile";

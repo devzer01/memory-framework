@@ -4,7 +4,8 @@ function parse_signed_request($signed_request)
 {
     list($encoded_sig, $payload) = explode('.', $signed_request, 2);
 
-    $secret = "20a7157ee5b60e14a654b1c0b5b18a8b"; // Use your app secret here
+    $secret = "84579e51c9d12b0079f3e6df49c7d6b0";
+    //$secret = "20a7157ee5b60e14a654b1c0b5b18a8b"; // Use your app secret here
 
     // decode the data
     $sig = base64_url_decode($encoded_sig);
@@ -70,7 +71,7 @@ if ($_POST['signed_request']) {
 
         $.ajaxSetup({contentType: "application/json", dataType: "json"});
 
-        $.get("//dev.cricket.pituwa.lk:6984/userprofile/_all_docs?include_docs=true&limit=10", function (resp) {
+        $.get("//cricket.pituwa.lk/scores.php", function (resp) {
             score = resp.rows.map(function (v) {
                 return {name: v.doc.user.first_name, score: v.doc.score || "0", peek: _peek};
             });
@@ -78,20 +79,21 @@ if ($_POST['signed_request']) {
 
         var createUser = function() {
             var data = {user: user, auth: authResponse};
-            $.post("https://dev.cricket.pituwa.lk/createuser.php", JSON.stringify(data), function (d) {
+            $.post("https://cricket.pituwa.lk/createuser.php", JSON.stringify(data), function (d) {
             }, 'json');
         };
 
         var updateScore = function(score) {
             var data = {score: score, _id: user.id, peek: _peek};
-            $.post("https://dev.cricket.pituwa.lk/savescore.php", JSON.stringify(data), function (d) {
+            $.post("https://cricket.pituwa.lk/savescore.php", JSON.stringify(data), function (d) {
                 console.log(d);
             }, 'json');
         };
 
         window.fbAsyncInit = function () {
             FB.init({
-                appId: '177689976392966',
+                appId: '231720560897481',
+//                appId: '177689976392966',
                 status: true,
                 xfbml: true,
                 version: 'v2.12'

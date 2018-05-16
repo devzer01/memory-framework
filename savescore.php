@@ -13,7 +13,7 @@ $raw = file_get_contents('php://input');
 try {
     $doc = json_decode($raw);
     $_doc = $client->getDoc($doc->_id);
-    $_doc->score = $doc->score;
+    if ($_doc->score < $doc->score) $_doc->score = $doc->score;
     $_doc->peek = $doc->peek;
     $_doc->rev = time();
     $response = $client->storeDoc($_doc);
