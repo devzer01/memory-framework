@@ -91,9 +91,8 @@ if ($_POST['signed_request']) {
         var updateScore = function(score) {
             var data = {score: score, _id: user.id, peek: _peek};
             $.post(serverName + "/savescore.php", JSON.stringify(data), function (d) {
-                console.log(d);
+                getScores();
             }, 'json');
-            getScores();
         };
 
         window.fbAsyncInit = function () {
