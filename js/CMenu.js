@@ -111,6 +111,18 @@ function CMenu(oData) {
         bitmap.on("click", this._onButPlayRelease, this, false, 'all');
         s_oStage.addChild(bitmap);
 
+        var bitmap = new createjs.Bitmap("sprites/flag-in.png");
+        bitmap.x = CANVAS_WIDTH / 2 / 4;
+        bitmap.y = 360;
+        bitmap.on("click", this._onButPlayRelease, this, false, "in");
+        s_oStage.addChild(bitmap);
+
+        var bitmap = new createjs.Bitmap("sprites/flag-bd.png");
+        bitmap.x = (CANVAS_WIDTH / 2 / 4) + 300;
+        bitmap.y = 360;
+        bitmap.on("click", this._onButPlayRelease, this, false, "bd");
+        s_oStage.addChild(bitmap);
+
 
         var spCheck = s_oSpriteLibrary.getSprite('checkboxen');
         var imageUnchecked = new createjs.Bitmap(spCheck);
