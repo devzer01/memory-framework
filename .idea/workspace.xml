@@ -23,18 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0754c338-076f-40f4-a269-763fef752bf5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/createjs_helper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/memory-cricket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/memory-cricket.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config_prod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/CCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/CCredits.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CCredits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/CGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/CMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/CMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/CMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scores.php" beforeDir="false" afterPath="$PROJECT_DIR$/scores.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,97 +41,114 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CInterface.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/CInterface.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="65" column="67" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMain.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/CMain.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="857">
-              <caret line="247" column="47" selection-start-line="246" selection-start-column="8" selection-end-line="247" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="159" column="7" lean-forward="true" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="savescore.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/savescore.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CPreloader.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/CPreloader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-208">
-              <caret lean-forward="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CTextButton.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/CTextButton.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-928">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ctl_utils.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ctl_utils.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2742">
-              <caret line="274" column="9" selection-start-line="274" selection-start-column="9" selection-end-line="274" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/settings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMenu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/CMenu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="141" column="37" lean-forward="true" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprite_lib.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/sprite_lib.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="CInterface.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/CInterface.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-600">
+                  <caret line="65" column="67" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="67" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMain.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/CMain.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="857">
+                  <caret line="247" column="47" selection-start-line="246" selection-start-column="8" selection-end-line="247" selection-end-column="47" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" selection-start-line="6" selection-end-line="6" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config_prod.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config_prod.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="savescore.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/savescore.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="225">
+                  <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ctl_utils.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/ctl_utils.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-2742">
+                  <caret line="274" column="9" selection-start-line="274" selection-start-column="9" selection-end-line="274" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/settings.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMenu.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/CMenu.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="438">
+                  <caret line="141" column="37" lean-forward="true" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sprite_lib.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/sprite_lib.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -231,7 +239,9 @@
         <option value="$PROJECT_DIR$/js/settings.js" />
         <option value="$PROJECT_DIR$/js/CMain.js" />
         <option value="$PROJECT_DIR$/js/CMenu.js" />
+        <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/config_prod.php" />
       </list>
     </option>
   </component>
@@ -308,14 +318,14 @@
     <property name="nodejs_interpreter_path" value="node" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/dist" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sprites" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/js/libs" />
-      <recent name="$PROJECT_DIR$/dist" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/dist" />
     </key>
   </component>
@@ -373,12 +383,12 @@
       <workItem from="1526363189974" duration="40646000" />
       <workItem from="1526445189705" duration="1695000" />
       <workItem from="1526495429560" duration="1890000" />
-      <workItem from="1526571744098" duration="7335000" />
+      <workItem from="1526571744098" duration="7697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123110000" />
+    <option name="totallyTimeSpent" value="123472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1080" height="1924" extended-state="6" />
@@ -481,13 +491,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/CMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1785">
@@ -679,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/createjs_helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -780,20 +776,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/savescore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="159" column="7" lean-forward="true" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="7" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/savescore.php">
+    <entry file="file://$PROJECT_DIR$/config_prod.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="75">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
         </state>
       </provider>
     </entry>

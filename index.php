@@ -5,7 +5,7 @@ function parse_signed_request($signed_request)
 {
     list($encoded_sig, $payload) = explode('.', $signed_request, 2);
 
-    $secret = "20a7157ee5b60e14a654b1c0b5b18a8b"; // Use your app secret here
+    $secret = APPSECRET; // Use your app secret here
 
     // decode the data
     $sig = base64_url_decode($encoded_sig);
@@ -98,8 +98,7 @@ if ($_POST['signed_request']) {
 
         window.fbAsyncInit = function () {
             FB.init({
-                appId: '231720560897481',
-//                appId: '177689976392966',
+                appId:  <?php echo APPID; ?>,
                 status: true,
                 xfbml: true,
                 version: 'v2.12'
@@ -142,7 +141,7 @@ if ($_POST['signed_request']) {
                     showLogin = true;
                     break;
             }
-            if (showLogin) FB.login(statusChangeCallback, {scope: 'public_profile,email,user_friends'});
+            if (showLogin) FB.login(statusChangeCallback, {scope: 'public_profile,email, user_friends'});
         }
 
         (function (d, s, id) {
