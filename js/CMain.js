@@ -98,6 +98,8 @@ function CMain(oData) {
         s_oSpriteLibrary.addSprite("card_spritesheet", "./sprites/card_spritesheet.png");
         s_oSpriteLibrary.addSprite("card_lk",  "./sprites/card_lk.png");
         s_oSpriteLibrary.addSprite("card_pk", "./sprites/card_pk.png");
+        s_oSpriteLibrary.addSprite("card_bd", "./sprites/card_bg.png");
+        s_oSpriteLibrary.addSprite("card_in", "./sprites/card_id.png");
         s_oSpriteLibrary.addSprite("card_all", "./sprites/card_all.png");
         s_oSpriteLibrary.addSprite("msg_box", "./sprites/msg_box.png");
         s_oSpriteLibrary.addSprite("but_fullscreen", "./sprites/but_fullscreen.png");
