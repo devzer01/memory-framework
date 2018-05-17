@@ -77,6 +77,11 @@ if ($_POST['signed_request']) {
                 score = resp.rows.map(function (v) {
                     return {name: v.doc.user.first_name, score: v.doc.score || "0", peek: _peek};
                 });
+                score.sort(function (a, b) {
+                   if (a.score < b.score) return 1;
+                   else if (a.score > b.score) return -1;
+                   return 0;
+                });
             });
         };
 
