@@ -1,10 +1,11 @@
-function CMenu() {
+function CMenu(oData) {
     var _pStartPosAudio;
     var _pStartPosPlay;
     var _pStartPosCredits;
     var _pStartPosFullscreen;
 
     var _oBg;
+    var _oData;
     var _oButPlay;
     var _oButCredits;
     var _oAudioToggle;
@@ -12,17 +13,9 @@ function CMenu() {
     var _oButFullscreen;
     var _fRequestFullScreen = null;
     var _fCancelFullScreen = null;
+    var _difficulty = [];
 
-    this._init = function () {
-        _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
-        s_oStage.addChild(_oBg);
-
-        _pStartPosPlay = {
-            x: (CANVAS_WIDTH / 2),
-            y: CANVAS_HEIGHT - 70
-        };
-
-
+    this._drawLeaderBoard = function(score) {
         var text = new createjs.Text("Top Score", "30px " + FONT_GAME, "#ffffff");
         var bounds = text.getBounds();
         text.x = ((CANVAS_WIDTH / 2) + 375);
@@ -41,6 +34,25 @@ function CMenu() {
             new CTextButton(((CANVAS_WIDTH / 2) + 650), verticalPos, oSprite, score[i].score, FONT_GAME, "White", "25", s_oStage);
             verticalPos += 50;
         }
+        // return {i: i, oSprite: oSprite, oSprite: oSprite};
+    };
+
+    this._init = function ()
+    {
+        _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
+        s_oStage.addChild(_oBg);
+
+        _pStartPosPlay = {
+            x: (CANVAS_WIDTH / 2),
+            y: CANVAS_HEIGHT - 70
+        };
+
+
+        var __ret = this._drawLeaderBoard(score);
+
+        /*var i = __ret.i;
+        var oSprite = __ret.oSprite;
+        var oSprite = __ret.oSprite;*/
 
         if (DISABLE_SOUND_MOBILE === false || s_bMobile === false) {
             var oSprite = s_oSpriteLibrary.getSprite('audio_icon');
@@ -108,7 +120,7 @@ function CMenu() {
         imageUnchecked.on('click', function () {
             s_oStage.removeChild(imageUnchecked);
             s_oStage.addChild(imageChecked);
-            $(s_oMain).trigger('toggle_peek', 1);
+            $(s_oMain).trigger('toggle_peek', {peek: 1});
         }, this);
 
         var imageChecked = new createjs.Bitmap(spCheck);
@@ -118,10 +130,11 @@ function CMenu() {
         imageChecked.on('click', function () {
                     s_oStage.addChild(imageUnchecked);
                     s_oStage.removeChild(imageChecked);
-                    $(s_oMain).trigger('toggle_peek', 0);
+                    $(s_oMain).trigger('toggle_peek', {peek: 0});
             }, this);
 
-        s_oStage.addChild(imageChecked);
+        if (this._oData.show_cards === 1) s_oStage.addChild(imageChecked);
+        else s_oStage.addChild(imageUnchecked);
 
         var text = new createjs.Text("Peek before start", "30px " + FONT_GAME, "#ffffff");
         var bounds = text.getBounds();
@@ -132,33 +145,32 @@ function CMenu() {
         text.scale = 2;
         s_oStage.addChild(text);
 
-        var difficulty = [
-            new createjs.Text("o Easy", "35px " + FONT_GAME, "#ff00ff"),
-            new createjs.Text("o Avg", "35px " + FONT_GAME, "#ffffff"),
-            new createjs.Text("o Hard", "35px " + FONT_GAME, "#ffffff")
-            ];
 
-        var gap = 0;
-        for (i = 0; i < 3; i++) {
-            difficulty[i].name = i;
-            difficulty[i].on("click", function (e) {
-                var that = e.target;
-                if (e.target.color == "#ff00ff") {
-                    e.target.color = "#ffffff";
+        var gap = 0; var _that = this;
+
+        for (var i = 0; i < 3; i++) {
+            _that._difficulty[i].name = i;
+            _that._difficulty[i].on("click", function (e) {
+                var idx = e.target.name;
+                if (_that._difficulty[idx].color === "#ff00ff") {
+                    _that._difficulty[idx].color = "#ffffff";
                 } else {
-                    e.target.color = "#ff00ff";
-                    $(s_oMain).trigger("change_difficulty", that.name);
+                    _that._difficulty[idx].color = "#ff00ff";
+                    _that._oData.diff_level_name = idx; //.name;
+                    $(s_oMain).trigger("change_difficulty", {level: idx});
                 }
                 var ct = [0, 1, 2];
-                ct.filter(function (idx) {
-                    return (that.name !== idx);
-                }).forEach(function (value) {
-                    difficulty[value].color = "#ffffff";
+                ct.forEach(function (value) {
+                    var _color = "#ffffff";
+                    if (_that._oData.diff_level_name === value) {
+                        _color = "#ff00ff";
+                    }
+                    _that._difficulty[value].color = _color;
                 });
             }, this);
         }
 
-        difficulty.forEach(function (v) {
+        _that._difficulty.forEach(function (v) {
             v.x = ((CANVAS_WIDTH / 2) - 400 + (++gap * 150 ));
             v.y = CANVAS_HEIGHT - 550;
             v.textBaseline = "alphabetic";
@@ -307,8 +319,17 @@ function CMenu() {
     };
 
     s_oMenu = this;
+    s_oMenu._oData = oData;
+    s_oMenu._difficulty = [
+        new createjs.Text("o Easy", "35px " + FONT_GAME, "#ff00ff"),
+        new createjs.Text("o Avg", "35px " + FONT_GAME, "#ffffff"),
+        new createjs.Text("o Hard", "35px " + FONT_GAME, "#ffffff")
+    ];
+    this._init(oData);
 
-    this._init();
+    $(this).on("leaderboard_update", function (e, score) {
+       this._drawLeaderBoard(score._s);
+    });
 }
 
 var s_oMenu = null;
