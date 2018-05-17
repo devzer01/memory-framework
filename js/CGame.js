@@ -111,7 +111,7 @@ function CGame(oData){
        return parseInt(balls / 6) + "." + parseInt(balls % 6);
     };
 
-    this.checkMatching = function(){
+    this.checkMatching = function() {
         var foldedCardsId = [];
         var foldedCardsType = [];
 
@@ -119,8 +119,8 @@ function CGame(oData){
             if (_aCards[i].isFolded() === false) {
                 foldedCardsType.push(_aCards[i].getType());
                 foldedCardsId.push(i);
-            };
-        };
+            }
+        }
 
         if (foldedCardsType[0] === foldedCardsType[1]) {
             var iMult = 1;
@@ -137,7 +137,7 @@ function CGame(oData){
                     _iTimeElapsBetweenMatching = 0;
             }
 
-            playSound("right", 1, false);
+            // playSound("right", 1, false);
 			
             _aCards[foldedCardsId[0]].eliminateCard();
             _aCards[foldedCardsId[1]].eliminateCard();
@@ -157,7 +157,7 @@ function CGame(oData){
                 _bUpdatesSuspended = true;
 				var oParent =  this;
                 setTimeout(function(){oParent.checkVictory();}, 1000);
-            };
+            }
 
         } else {
             var out1 = _aCards[foldedCardsId[0]].incorrect();

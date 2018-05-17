@@ -1,11 +1,11 @@
 <?php
+require_once "config.php";
 header("Access-Control-Allow-Origin: *");
 function parse_signed_request($signed_request)
 {
     list($encoded_sig, $payload) = explode('.', $signed_request, 2);
 
-    $secret = "84579e51c9d12b0079f3e6df49c7d6b0";
-    //$secret = "20a7157ee5b60e14a654b1c0b5b18a8b"; // Use your app secret here
+    $secret = APPSECRET; // Use your app secret here
 
     // decode the data
     $sig = base64_url_decode($encoded_sig);
@@ -68,32 +68,37 @@ if ($_POST['signed_request']) {
         var showLogin = false;
         var graph = {fields: 'first_name'};
         var user = null, authResponse = null, _peek;
+        var serverName = "//<?php echo SERVERNAME; ?>/";
 
         $.ajaxSetup({contentType: "application/json", dataType: "json"});
 
-        $.get("//cricket.pituwa.lk/scores.php", function (resp) {
-            score = resp.rows.map(function (v) {
-                return {name: v.doc.user.first_name, score: v.doc.score || "0", peek: _peek};
+        var getScores = function() {
+            $.get(serverName + "/scores.php", function (resp) {
+                score = resp.rows.map(function (v) {
+                    return {name: v.doc.user.first_name, score: v.doc.score || "0", peek: _peek};
+                });
             });
-        });
+        };
+
+        getScores();
 
         var createUser = function() {
             var data = {user: user, auth: authResponse};
-            $.post("https://cricket.pituwa.lk/createuser.php", JSON.stringify(data), function (d) {
+            $.post(serverName + "/createuser.php", JSON.stringify(data), function (d) {
             }, 'json');
         };
 
         var updateScore = function(score) {
             var data = {score: score, _id: user.id, peek: _peek};
-            $.post("https://cricket.pituwa.lk/savescore.php", JSON.stringify(data), function (d) {
+            $.post(serverName + "/savescore.php", JSON.stringify(data), function (d) {
                 console.log(d);
             }, 'json');
+            getScores();
         };
 
         window.fbAsyncInit = function () {
             FB.init({
-                appId: '231720560897481',
-//                appId: '177689976392966',
+                appId:  <?php echo APPID; ?>,
                 status: true,
                 xfbml: true,
                 version: 'v2.12'
@@ -117,17 +122,26 @@ if ($_POST['signed_request']) {
         function statusChangeCallback(response) {
             switch (response.status) {
                 case 'connected':
+                    showLogin = false;
                     authResponse = response.authResponse;
                     FB.api('/me', graph, setVars);
                     FB.api("/me/friends", {}, function (data) {
-                        console.log(data);
+                        if (data.data.length === 0) {
+                            var l = score.length;
+                            for (var i = l - 1; i < 10; i++) {
+                                score.push({name: "player  " + i, score: 10, peek: 0});
+                                console.log(score.length);
+                            }
+                            $(s_oMain).trigger("leaderboard_update", {_s: score});
+                        }
+
                     });
                     break;
                 default:
                     showLogin = true;
                     break;
             }
-            if (showLogin) FB.login(statusChangeCallback, {scope: 'public_profile,email,user_friends'});
+            if (showLogin) FB.login(statusChangeCallback, {scope: 'public_profile,email, user_friends'});
         }
 
         (function (d, s, id) {
@@ -150,13 +164,16 @@ if ($_POST['signed_request']) {
     $(document).ready(function(){
         var oMain = new CMain({
             card_per_level :   [2, 4, 6, 8, 10, 12, 16],
+            _card_per_level :   [2, 4, 6, 8, 10, 12, 16],
             time_level:[5, 10, 15, 20, 25, 30, 35],
+            _time_level:[5, 10, 15, 20, 25, 30, 35],
             score_match_card: 4,
             score_time_left_mult: 3,
             time_match_mult: 3000,
             show_cards: 1,
             fullscreen:true,
-            check_orientation:true
+            check_orientation:true,
+            diff_level_name: 0
         });
 
         $(oMain).on("start_session", function(evt) {

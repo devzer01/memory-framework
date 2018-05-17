@@ -57,9 +57,9 @@ function CMain(oData) {
         aSoundsInfo.push({path: './sounds/', filename: 'next_level', loop: false, volume: 1, ingamename: 'next_level'});
         aSoundsInfo.push({path: './sounds/', filename: 'game_over', loop: false, volume: 1, ingamename: 'game_over'});
         aSoundsInfo.push({path: './sounds/', filename: 'win', loop: false, volume: 1, ingamename: 'win'});
-        aSoundsInfo.push({path: './sounds/', filename: 'right1', loop: false, volume: 1, ingamename: 'right1'});
+       /* aSoundsInfo.push({path: './sounds/', filename: 'right1', loop: false, volume: 1, ingamename: 'right1'});
         aSoundsInfo.push({path: './sounds/', filename: 'right2', loop: false, volume: 1, ingamename: 'right2'});
-        aSoundsInfo.push({path: './sounds/', filename: 'right3', loop: false, volume: 1, ingamename: 'right3'});
+        aSoundsInfo.push({path: './sounds/', filename: 'right3', loop: false, volume: 1, ingamename: 'right3'});*/
         aSoundsInfo.push({path: './sounds/', filename: 'click', loop: false, volume: 1, ingamename: 'click'});
 
         RESOURCE_TO_LOAD += aSoundsInfo.length;
@@ -143,7 +143,11 @@ function CMain(oData) {
     };
 
     this.gotoMenu = function () {
-        _oMenu = new CMenu();
+        if (s_oMain._oMenu == null) {
+            s_oMain._oMenu = new CMenu(s_oMain._oData);
+        } else {
+            s_oMain._oMenu._init(s_oMain._oData);
+        }
         _iState = STATE_MENU;
     };
 
@@ -209,6 +213,8 @@ function CMain(oData) {
 
     s_oMain = this;
     _oData = oData;
+    s_oMain._oData = oData;
+    s_oMain._oData.diff_level_name = s_oMain._oData.diff_level_name || 0;
 
     ENABLE_CHECK_ORIENTATION = oData.check_orientation;
 
@@ -218,22 +224,28 @@ function CMain(oData) {
         updateScore(score);
     });
 
-    $(this).on("toggle_peek", function (e) {
-       oData.show_cards = (oData.show_cards === 0) ? 1 : 0;
+    $(this).on("leaderboard_update", function (e, score) {
+        $(_oMenu).trigger("leaderboard_update", {_s: score._s});
+    });
+
+    $(this).on("toggle_peek", function (e, data) {
+       oData.show_cards = data.peek;
        _oData.show_cards = oData.show_cards;
     });
 
     $(this).on("change_difficulty", function (e, lvl) {
-        oData.card_per_level = oData.card_per_level.map(function (v) {
-           return parseInt(v) * (parseInt(lvl) + 1);
+        oData.diff_level_name = lvl.level;
+        s_oMain._oData.diff_level_name = lvl.level;
+        oData.card_per_level = oData._card_per_level.map(function (v) {
+           return parseInt(v) * (parseInt(lvl.level) + 1);
         });
-        oData.time_level = oData.time_level.map(function (v) {
-            return parseInt(v) * Math.ceil((parseInt(lvl) + 1) * 0.5);
+        oData.time_level = oData._time_level.map(function (v) {
+            return parseInt(v) * Math.ceil((parseInt(lvl.level) + 1) * 0.5);
         });
         _oData.card_per_level = oData.card_per_level;
         _oData.time_level = oData.time_level;
-        oData.show_cards = (oData.show_cards === 0) ? 1 : 0;
-        _oData.show_cards = oData.show_cards;
+        /*oData.show_cards = (oData.show_cards === 0) ? 1 : 0;
+        _oData.show_cards = oData.show_cards;*/
     });
 }
 

@@ -1,6 +1,6 @@
 var CANVAS_WIDTH = 1920;
 var CANVAS_HEIGHT = 1080;
-var PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=lk.pituwa.memory"
+var PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=lk.pituwa.memory";
 
 var EDGEBOARD_X = 220;
 var EDGEBOARD_Y = 220;
