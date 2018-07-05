@@ -26,10 +26,10 @@ function base64_url_decode($input)
     return base64_decode(strtr($input, '-_', '+/'));
 }
 
+$redir="";
 if ($_POST['signed_request']) {
     $auth = parse_signed_request($_POST['signed_request']);
-    var_dump($auth);
-    if(!isset($auth['oauth_token'])) header("Location: https://www.facebook.com/v3.0/dialog/oauth?client_id=231720560897481&redirect_uri=https://apps.facebook.com/231720560897481&scope=email,public_profile,user_link");
+    if(!isset($auth['oauth_token'])) $redir="https://www.facebook.com/v3.0/dialog/oauth?client_id=231720560897481&redirect_uri=https://apps.facebook.com/231720560897481&scope=email,public_profile,user_link";
 }
 
 ?>
@@ -43,6 +43,7 @@ if ($_POST['signed_request']) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="msapplication-tap-highlight" content="no"/>
+    <?php if ($redir != "") { print("<script>top.location.href='$redir'; </script>"); exit; } ?>	
     <script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
     <script type="text/javascript" src="js/libs/createjs-2013.12.12.js"></script>
     <script type="text/javascript" src="js/libs/howler.js"></script>
@@ -64,7 +65,7 @@ if ($_POST['signed_request']) {
     <script type="text/javascript" src="js/CGameOver.js"></script>
     <script type="text/javascript" src="js/CVictory.js"></script>
     <script type="text/javascript" src="js/CCredits.js"></script>
-    <script>
+     <script>
         var score = [];
 
         var showLogin = false;
