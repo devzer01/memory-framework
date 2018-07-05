@@ -15,6 +15,8 @@ function CMenu(oData) {
     var _fCancelFullScreen = null;
     var _difficulty = [];
 
+    var _score = null;
+
     this._drawLeaderBoard = function(score) {
         var text = new createjs.Text("Top Score", "30px " + FONT_GAME, "#ffffff");
         var bounds = text.getBounds();
@@ -24,12 +26,14 @@ function CMenu(oData) {
         text.shadow = new createjs.Shadow("#000000", 5, 5, 10);
         text.scale = 2;
         s_oStage.addChild(text);
-
+	this._score = score;
         var verticalPos = 250;
         for (var i = 0; i < score.length; i++) {
             var oSprite = s_oSpriteLibrary.getSprite('player_name');
-            new CTextButton(((CANVAS_WIDTH / 2) + 400), verticalPos, oSprite, score[i].name, FONT_GAME, "White", "25", s_oStage);
-
+            var btn = new CTextButton(((CANVAS_WIDTH / 2) + 400), verticalPos, oSprite, score[i].name, FONT_GAME, "White", "25", s_oStage);
+		btn.addEventListener(ON_MOUSE_DOWN, function (e) {
+			window.open(this.link);
+		}, score[i]);
             var oSprite = s_oSpriteLibrary.getSprite('score_bg');
             new CTextButton(((CANVAS_WIDTH / 2) + 650), verticalPos, oSprite, score[i].score, FONT_GAME, "White", "25", s_oStage);
             verticalPos += 50;

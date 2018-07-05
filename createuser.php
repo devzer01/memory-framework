@@ -3,10 +3,10 @@
 include_once 'vendor/autoload.php';
 
 ### ANON DSN
-$couchDsn = "http://admin:foobar@localhost:5984/";
+$couchDsn = "http://admin:couchdb@localhost:5984/";
 ### AUTHENTICATED DSN
 //$couchDsn = "http://admin:adminPwd@localhost:5984/";
-$couchDB = "userprofile";
+$couchDB = "userprofile1";
 //Import required libraries
 use PHPOnCouch\CouchClient;
 use PHPOnCouch\Exceptions\CouchException;

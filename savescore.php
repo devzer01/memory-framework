@@ -2,7 +2,7 @@
 
 include_once 'vendor/autoload.php';
 $couchDsn = "http://localhost:5984/";
-$couchDB = "userprofile";
+$couchDB = "userprofile1";
 
 use PHPOnCouch\CouchClient;
 use PHPOnCouch\Exceptions\CouchException;

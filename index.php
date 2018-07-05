@@ -28,6 +28,8 @@ function base64_url_decode($input)
 
 if ($_POST['signed_request']) {
     $auth = parse_signed_request($_POST['signed_request']);
+    var_dump($auth);
+    if(!isset($auth['oauth_token'])) header("Location: https://www.facebook.com/v3.0/dialog/oauth?client_id=231720560897481&redirect_uri=https://apps.facebook.com/231720560897481&scope=email,public_profile,user_link");
 }
 
 ?>
@@ -66,7 +68,7 @@ if ($_POST['signed_request']) {
         var score = [];
 
         var showLogin = false;
-        var graph = {fields: 'first_name'};
+        var graph = {fields: 'first_name, link'};
         var user = null, authResponse = null, _peek;
         var serverName = "//<?php echo SERVERNAME; ?>/";
 
@@ -74,8 +76,9 @@ if ($_POST['signed_request']) {
 
         var getScores = function() {
             $.get(serverName + "/scores.php", function (resp) {
-                score = resp.rows.map(function (v) {
-                    return {name: v.doc.user.first_name, score: v.doc.score || "0", peek: _peek};
+		console.log(resp);
+                score = resp.map(function (v) {
+                    return {name: v.first_name, link: v.link, score: v.score || "0", peek: _peek};
                 });
                 score.sort(function (a, b) {
                    if (a.score < b.score) return 1;
@@ -105,14 +108,21 @@ if ($_POST['signed_request']) {
                 appId:  <?php echo APPID; ?>,
                 status: true,
                 xfbml: true,
-                version: 'v2.12'
+                version: 'v3.0'
             });
             checkLoginState();
+            FB.Event.subscribe('auth.statusChange', function(response) {
+	         // do something with response
+	    });
+            FB.Event.subscribe('auth.login', function(response) {
+	         // do something with response
+	    });
         };
 
 
         function checkLoginState() {
             FB.getLoginStatus(function (response) {
+		console.log(response);
                 statusChangeCallback(response);
             }, true);
         }
@@ -124,28 +134,35 @@ if ($_POST['signed_request']) {
         }
 
         function statusChangeCallback(response) {
+	    console.log(response);
             switch (response.status) {
+		case 'not_authorized':
+          	    FB.login(statusChangeCallback, {scope: 'public_profile,email,user_link'});
+		    break;
+	        case 'authorization_expired':
+          	    FB.login(statusChangeCallback, {scope: 'public_profile,email,user_link'});
+	            break;
                 case 'connected':
                     showLogin = false;
                     authResponse = response.authResponse;
                     FB.api('/me', graph, setVars);
-                    FB.api("/me/friends", {}, function (data) {
+                    /** FB.api("/me/friends", {}, function (data) {
                         if (data.data.length === 0) {
                             var l = score.length;
                             for (var i = l - 1; i < 10; i++) {
-                                score.push({name: "player  " + i, score: 10, peek: 0});
+                                score.push({name: "player  " + i, score: 10, peek: 0, link: "" });
                                 console.log(score.length);
                             }
                             $(s_oMain).trigger("leaderboard_update", {_s: score});
                         }
 
-                    });
+                    }); **/
                     break;
                 default:
+            	    FB.login(statusChangeCallback, {scope: 'public_profile,email,user_link'});
                     showLogin = true;
                     break;
             }
-            if (showLogin) FB.login(statusChangeCallback, {scope: 'public_profile,email, user_friends'});
         }
 
         (function (d, s, id) {
