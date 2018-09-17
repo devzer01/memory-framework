@@ -153,8 +153,7 @@ function CInterface(szTimeLeft) {
     };
 
     this._openPlayStore = function () {
-        document.location.href = "https://play.google.com/store/apps/details?id=lk.pituwa.cricket";
-
+        document.location.href = "https://play.google.com/store/apps/details?id=org.gnuzero.memory";
     };
 
     this.updateBalls = function (balls) {

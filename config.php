@@ -9,3 +9,4 @@
 define('SERVERNAME', "cricket.pituwa.lk");
 define("APPID", "'231720560897481'");
 define("APPSECRET", "84579e51c9d12b0079f3e6df49c7d6b0");
+define('SOAUTH', true);

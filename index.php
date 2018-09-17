@@ -27,7 +27,7 @@ function base64_url_decode($input)
 }
 
 $redir="";
-if ($_POST['signed_request']) {
+if ($_POST['signed_request'] && SOAUTH) {
     $auth = parse_signed_request($_POST['signed_request']);
     if(!isset($auth['oauth_token'])) $redir="https://www.facebook.com/v3.0/dialog/oauth?client_id=231720560897481&redirect_uri=https://apps.facebook.com/231720560897481&scope=email,public_profile,user_link";
 }
@@ -43,7 +43,10 @@ if ($_POST['signed_request']) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="msapplication-tap-highlight" content="no"/>
-    <?php if ($redir != "") { print("<script>top.location.href='$redir'; </script>"); exit; } ?>	
+    <?php 
+	if ($redir != "") { print("<script>top.location.href='$redir'; </script>"); exit; }
+	?>
+    
     <script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
     <script type="text/javascript" src="js/libs/createjs-2013.12.12.js"></script>
     <script type="text/javascript" src="js/libs/howler.js"></script>
@@ -67,7 +70,9 @@ if ($_POST['signed_request']) {
     <script type="text/javascript" src="js/CCredits.js"></script>
      <script>
         var score = [];
-
+	var animaterDropped = false;
+	var isCanvas = <?php printf("%s", (empty($_POST)) ? 'false' : 'true'); ?>;
+	var gameStarted = false;
         var showLogin = false;
         var graph = {fields: 'first_name, link'};
         var user = null, authResponse = null, _peek;
@@ -94,7 +99,8 @@ if ($_POST['signed_request']) {
         var createUser = function() {
             var data = {user: user, auth: authResponse};
             $.post(serverName + "/createuser.php", JSON.stringify(data), function (d) {
-            }, 'json');
+		if (!gameStarted) startGame();
+	    }, 'json');
         };
 
         var updateScore = function(score) {
@@ -111,12 +117,32 @@ if ($_POST['signed_request']) {
                 xfbml: true,
                 version: 'v3.0'
             });
+
+	    if (!isCanvas) {
+		var finished_rendering = function() {
+			if (animaterDropped) return;
+			animaterDropped = true;
+  			console.log("finished rendering plugins");
+			var spinner = document.getElementById("spinner");
+			spinner.style.display = 'none';
+		}
+		FB.Event.subscribe('xfbml.render', finished_rendering);
+	    }
+
             checkLoginState();
             FB.Event.subscribe('auth.statusChange', function(response) {
-	         // do something with response
+	    	console.log(response);
+		if (!gameStarted) startGame();
 	    });
             FB.Event.subscribe('auth.login', function(response) {
-	         // do something with response
+	    	console.log(response);
+		if (!gameStarted) startGame();
+	    });
+
+	   
+	    $("#fbLogin").on('click', function (e) {
+		console.log(e);
+		FB.login(statusChangeCallback, {scope: 'public_profile,email,user_link'});
 	    });
         };
 
@@ -137,52 +163,44 @@ if ($_POST['signed_request']) {
         function statusChangeCallback(response) {
 	    console.log(response);
             switch (response.status) {
-		case 'not_authorized':
-          	    FB.login(statusChangeCallback, {scope: 'public_profile,email,user_link'});
-		    break;
-	        case 'authorization_expired':
-          	    FB.login(statusChangeCallback, {scope: 'public_profile,email,user_link'});
-	            break;
                 case 'connected':
-                    showLogin = false;
                     authResponse = response.authResponse;
                     FB.api('/me', graph, setVars);
-                    /** FB.api("/me/friends", {}, function (data) {
-                        if (data.data.length === 0) {
-                            var l = score.length;
-                            for (var i = l - 1; i < 10; i++) {
-                                score.push({name: "player  " + i, score: 10, peek: 0, link: "" });
-                                console.log(score.length);
-                            }
-                            $(s_oMain).trigger("leaderboard_update", {_s: score});
-                        }
-
-                    }); **/
-                    break;
+		    break;
+		case 'not_authorized':
+	        case 'authorization_expired':
                 default:
-            	    FB.login(statusChangeCallback, {scope: 'public_profile,email,user_link'});
-                    showLogin = true;
+		    if (isCanvas) FB.login(statusChangeCallback, {scope: 'public_profile,email,user_link'});
                     break;
             }
         }
 
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
+	<?php 
+   	    $SDKURL = "https://connect.facebook.net/en_US/sdk.js";
+	    if (empty($_POST)) {
+		$SDKURL = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=231720560897481&autoLogAppEvents=1";
+	    }
+        ?>
     </script>
 </head>
-<body>
-<div style="position: fixed; background-color: transparent; top: 0; left: 0; width: 100%; height: 100%"></div>
-<script>
+<body id='gbody'>
+    <div id="fb-root"></div>
+    <script>
 
+	if (!isCanvas) {
+	
+	}
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+              return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "<?php echo $SDKURL;?>";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
     $(document).ready(function(){
         var oMain = new CMain({
             card_per_level :   [2, 4, 6, 8, 10, 12, 16],
@@ -251,19 +269,51 @@ if ($_POST['signed_request']) {
                     msg_share: TEXT_SHARE_SHARE1 + iScore + TEXT_SHARE_SHARE1});
             }
         });
-
-        if(isIOS()){
-            setTimeout(function(){sizeHandler();},200);
-        }else{
-            sizeHandler();
-        }
+    	if (user === null || user.user_id === undefined) {
+		$('#gbody').css('background', 'url(https://cricket.pituwa.lk/sprites/bg_1.jpg)');
+		$("#spinner").show();
+		$("#dvlogin").show();
+		$("#canvas").hide();
+    	} else {
+		if (!gameStarted) startGame();
+	}
     });
 
+	function startGame() {
+		gameStarted = true;
+		$('#gbody').css('background', 'none');
+		$("#dvlogin").hide();
+		$("#canvas").show();
+        	if(isIOS()){
+            		setTimeout(function(){sizeHandler();},200);
+        	}else{
+            		sizeHandler();
+        	}
+	}
 </script>
+	<span id=spinner style='font-size: 10em; style: display: none;'>Loading</span>
+	<div id=fbxmllog' class="fb-login-button center" data-width="500px" data-max-rows="5" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true"></div>
+
 <canvas id="canvas" class='ani_hack' width="1920" height="1080" style="display: block;"></canvas>
 <div data-orientation="landscape" class="orientation-msg-container">
-    <p class="orientation-msg-text"><img src="sprites/turn-phone.png" alt="Please rotate your device Landscape" /></p>
-</div>
+    <p class="orientation-msg-text"><h1>දුරකතනය තිරස් අතට හරවන්න</h1>
+<img src="sprites/turn-phone.png" alt="Please rotate your device Landscape" /></p>
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '999765913452109');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=999765913452109&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->>
 <div id="block_game" style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%; display:none"></div>
 
 </body>
